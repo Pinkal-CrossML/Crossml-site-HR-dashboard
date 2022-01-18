@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%} Candidates Profile {% endblock%}
+{% block body %}
+<h4> Candidates Profile </h>
+
+    <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+        <div class="card p-4">
+            <div class=" image d-flex flex-column justify-content-center align-items-center"> <button
+                    class="btn btn-secondary"> <img src="{% static 'images/avatar6.png' %}" height="100"
+                        width="100" /></button> <span class="name mt-3">{{ cadidt.name }}</span>
+                <h5>Personal Information of the Candidate</h5>
+                <ul>
+                    <h5><li> Id:{{ cadidt.id }}</li></h5>
+                    <h5><li> Name: {{ cadidt.name }}</li></h5>
+                    <h5><li> Job Title: {{ cadidt.job_title }}</li></h5>
+                    <h5><li> Email: {{ cadidt.email }}</li></h5>
+                    <h5><li> Phone: {{ cadidt.phone_number }}</li></h5>
+                    <h5><li><a href="{{cadidt.li_link}}">{{cadidt.li_link}}</a></li></h5>
+                    <h5><li><a href="{{cadidt.git_link}}">{{cadidt.git_link}}</a></li></h5>
+                    <h5><li><a href="/media/{{cadidt.cv_file}}">{{cadidt.cv_file}}</a></li></h5>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

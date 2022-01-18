@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title%} Dashboard {% endblock%}
+
+{% block body %}
+<br>
+<div class="container-fluid">
+<div class ="row">
+    <div class="col-md-3">
+        <div  class="card border-danger mb-3 co-md-3">
+            <div class="card-body">
+                <h5 class="card-title text-danger" >Job Title: {{cadidt.job_title}} </h5>
+                <h6 class="card-title text-danger" >Job Role: {{cadidt.job_role}} </h6>
+                <p class="card-text">View All candidates which Applied for {{cadidt.job_title}} role </p>
+                <a <button type="button" class="btn btn-outline-secondary" href="{% url 'byjobrole' cadidt.job_title %}" >View Candidates</button></a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    
+
+
+{% endblock %}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"
+    
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href=""><img class="logo" src="{% static 'images/logo.png' %}" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+    
+</nav>
+
+    <div class="container">
+         
+        <div class="col-6 mx-auto mt-5">
+        <h5><b>Note:</b> Only  HR Department login Here</h5>
+           <div class="card shadow">
+               <div class="card-body">
+               
+                   <h3 class="card-title">LOGIN</h3>
+                   
+                   <form method="POST" action="{% url 'login' %}">
+                     {% csrf_token %}
+                       
+                      
+                      <div class="form-group">
+                       
+                        <input type="text" class="form-control" name="username" id="exampleInputname" placeholder="Enter your Username" required>
+                        
+    
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                      </div>
+                      <br>
+                      
+                      <button type="submit" name="name" class="btn btn-outline-secondary my-2 my-sm-0">Submit</button>
+                    </form>
+    
+                    
+               </div>
+           </div>
+        </div>
+    
+    </div>
+    <footer class="page-footer font-small mdb-color lighten-3 pt-4" style="margin-top:150px">
+      
+      <div class="footer-copyright text-center py-3">© 2019 crossML All Rights Reserved.
+          <a href="https://www.crossml.com/" target="_blank" > crossml.com</a>
+      </div>
+  </footer>
+</body>
+</html>

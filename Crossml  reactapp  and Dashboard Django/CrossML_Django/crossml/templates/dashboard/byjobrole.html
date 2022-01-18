@@ -1,0 +1,44 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title%} Candidates {% endblock%}
+{% block body %}
+<h4>List of all Candidates Applied for job </h4>
+<div class="card-body">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Job Title</th>
+      <th scope="col">Linkedin Link </th>
+      <th scope="col">Git Link</th>
+      <th scope="col">CV File/Resume</th>
+      <th scope="col">Apply at</th>
+      <th scope="col">Action</th>
+      {% comment %} <th scope="col">Action</th> {% endcomment %}
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    {% for cndtData in cndtDatas %}
+      <th scope="row">{{cndtData.id}}</th>
+      <td>{{cndtData.name}}</td>
+      <td>{{cndtData.email}}</td>
+      <td>{{cndtData.phone_number}}</td>
+      <td>{{cndtData.job_title}}</td>
+      <td><a href="{{cndtData.li_link}}">{{cndtData.li_link}}</a></td>
+      <td><a href="{{cndtData.git_link}}">{{cndtData.git_link}}</a></td>
+      <td><a href="/media/{{cndtData.cv_file}}">{{cndtData.cv_file}}</a></td>
+      <td>{{cndtData.created_at}}</td>
+      <td><a <button type="button" class="btn btn-outline-secondary" href="{% url 'profile' cndtData.id %}" >View</button></td></a>
+      {% comment %} <td><a <button type="button" class="btn btn-outline-danger" href="{% url 'delete_profile' cndtData.id %}" >Delete</button></td></a> {% endcomment %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
+
+

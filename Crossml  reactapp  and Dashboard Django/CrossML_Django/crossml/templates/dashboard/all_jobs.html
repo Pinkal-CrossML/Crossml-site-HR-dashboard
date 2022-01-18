@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title%} All jobs {% endblock%}
+{% block body %}
+<h4>List of all Jobs </h4>
+<div class="card-body">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Job ID</th>
+      <th scope="col">Job Title</th>
+      <th scope="col">Job Role</th>
+      <th scope="col">Min Experience</th>
+      <th scope="col">Max Experience</th>
+      <th scope="col">Post Date </th>
+      <th scope="col">Action </th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    {% for jobtData in jobDatas %}
+      <th scope="row">{{jobtData.id}}</th>
+      <td>{{jobtData.job_title}}</td>
+      <td>{{jobtData.job_role}}</td>
+      <td>{{jobtData.min_experience}}</td>
+      <td>{{jobtData.max_experience}}</td>
+      <td>{{jobtData.post_date}}</td>
+      <td><a <button type="button" class="btn btn-outline-secondary" href="{% url 'job' jobtData.id %}" > View Job</button></td></a>
+      <tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% endblock %}
