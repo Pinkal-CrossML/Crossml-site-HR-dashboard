@@ -1,0 +1,56 @@
+{
+  "name": "crossml_reactapp",
+  "version": "0.1.0",
+  "homepage": "http://crossml-preprod.s3-website-us-east-1.amazonaws.com/",
+  "private": true,
+  "dependencies": {
+    "@popperjs/core": "^2.7.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.24.0",
+    "bootstrap": "^4.6.0",
+    "chokidar": "^3.5.1",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "react": "^16.0.0",
+    "react-bootstrap": "^1.5.0",
+    "react-cookie-consent": "^6.2.3",
+    "react-dom": "^16.0.0",
+    "react-escape-html": "^1.0.5",
+    "react-google-recaptcha": "^2.1.0",
+    "react-hook-form": "^7.20.4",
+    "react-hook-form-resolvers": "0.0.1",
+    "react-meta-tags": "^1.0.1",
+    "react-multi-carousel": "^2.6.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.2",
+    "sweetalert2": "^11.1.10",
+    "sweetalert2-react-content": "^4.2.0",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
